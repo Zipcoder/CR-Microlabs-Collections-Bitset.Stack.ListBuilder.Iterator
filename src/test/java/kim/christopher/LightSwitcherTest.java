@@ -210,6 +210,7 @@ public class LightSwitcherTest {
 
     }
 
+    @Test
     public void rightShiftStepsTest(){
         //Given
         int expected1 = 10;
