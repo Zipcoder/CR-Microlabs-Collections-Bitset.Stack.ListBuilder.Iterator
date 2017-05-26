@@ -1,4 +1,4 @@
-package kim.christopher;
+package kim.christopher.bitwise;
 
 import java.util.BitSet;
 
@@ -44,14 +44,14 @@ public class LightSwitcher {
     }
 
     public static int getSwitchPositionAt(BitSet switches, int position) {
-        return switches.get(position)? 1 : 0;
+        return switches.get(position) ? 1 : 0;
     }
 
     public static BitSet moveRightBy(BitSet switches, int count) {
         BitSet result = (BitSet) switches.clone();
-        for(int i = 0; i < count; i++){
-            for(int j = 1; j < 9; j++){
-                if(result.get(j))
+        for (int i = 0; i < count; i++) {
+            for (int j = 1; j < 9; j++) {
+                if (result.get(j))
                     result.set(j - 1);
                 else result.set(j - 1, false);
             }
@@ -61,9 +61,9 @@ public class LightSwitcher {
 
     public static BitSet moveLeftBy(BitSet switches, int count) {
         BitSet result = (BitSet) switches.clone();
-        for(int i = 0; i < count; i++){
-            for(int j = 6; j >= 0; j--){
-                if(result.get(j))
+        for (int i = 0; i < count; i++) {
+            for (int j = 6; j >= 0; j--) {
+                if (result.get(j))
                     result.set(j + 1);
                 else result.set(j + 1, false);
             }
@@ -80,22 +80,22 @@ public class LightSwitcher {
         return BitSet.valueOf(new long[]{Long.parseLong(s, 2)});
     }
 
-    public static int leftShiftSteps(BitSet bs){
+    public static int leftShiftSteps(BitSet bs) {
         int count = 0;
         int result = 0;
-        for(int i = 7; i >= 0; i--){
-            if(bs.get(i))
+        for (int i = 7; i >= 0; i--) {
+            if (bs.get(i))
                 result += count;
             else count++;
         }
         return result;
     }
 
-    public static int rightShiftSteps(BitSet bs){
+    public static int rightShiftSteps(BitSet bs) {
         int count = 0;
         int result = 0;
-        for(int i = 0; i < 8; i++){
-            if(bs.get(i))
+        for (int i = 0; i < 8; i++) {
+            if (bs.get(i))
                 result += count;
             else count++;
         }

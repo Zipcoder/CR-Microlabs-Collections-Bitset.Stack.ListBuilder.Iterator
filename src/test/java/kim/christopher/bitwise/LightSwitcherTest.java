@@ -1,11 +1,12 @@
-package kim.christopher;
+package kim.christopher.bitwise;
 
+import kim.christopher.bitwise.LightSwitcher;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.BitSet;
 
-import static kim.christopher.LightSwitcher.*;
+import static kim.christopher.bitwise.LightSwitcher.*;
 import static org.junit.Assert.assertEquals;
 
 public class LightSwitcherTest {
